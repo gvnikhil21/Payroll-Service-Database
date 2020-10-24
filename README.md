@@ -41,3 +41,12 @@ insert into employee_payroll (name, start, salary) values
 ```
 select * from employee_payroll;
 ```
+### Retrieve salary data for particular employee 
+```
+select salary from employee_payroll where name = 'Gates';
+```
+### Retrieve all the data for employee who joined in particular date range
+```
+select * from employee_payroll
+where start between cast('2018-01-01' as date) and date(now());
+```
