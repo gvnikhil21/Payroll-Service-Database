@@ -56,11 +56,14 @@ alter table employee_payroll
 add gender char(1) not null after name;
 ```
 ### Update rows in table to reflect correct employee gender
+#### Add gender as 'M' for male employees
 ```
 update employee_payroll
 set gender='M' 
 where name='Gates' or name='Charlie';
-
+```
+#### Add gender as 'F' for female employees
+```
 update employee_payroll
 set gender='F'
 where name='Mark';
