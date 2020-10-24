@@ -37,3 +37,7 @@ insert into employee_payroll (name, start, salary) values
 ('Mark', '2019-11-13', 2000000),
 ('Charlie', '2020-05-21', 3000000);
 ```
+### Retrieve all employee payroll data added to payroll_service database
+```
+select * from employee_payroll;
+```
