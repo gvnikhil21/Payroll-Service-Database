@@ -68,3 +68,34 @@ update employee_payroll
 set gender='F'
 where name='Mark';
 ```
+### Find sum of all the salaries present in employee_payroll table
+```
+select sum(salary) from employee_payroll;
+```
+### Find sum of salaries of male employees
+```
+select sum(salary) from employee_payroll
+where gender='M';
+```
+### Find avg of all salaries
+```
+select avg(salary) from employee_payroll;
+```
+### Find avg salaries of male and female employees
+```
+select gender, avg(salary) from employee_payroll
+group by gender;
+```
+### Find max salary
+```
+select max(salary) from employee_payroll;
+```
+### Find min salary
+```
+select min(salary) from employee_payroll;
+```
+### Find count of male and female employees
+```
+select gender,count(gender) from employee_payroll
+group by gender;
+```
