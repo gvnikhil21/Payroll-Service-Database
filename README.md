@@ -30,3 +30,10 @@ show tables;
 ```
 describe employee_payroll;
 ```
+### Insert values into employee_payroll table
+```
+insert into employee_payroll (name, start, salary) values
+('Gates', '2018-01-03', 1000000),
+('Mark', '2019-11-13', 2000000),
+('Charlie', '2020-05-21', 3000000);
+```
