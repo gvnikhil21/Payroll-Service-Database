@@ -99,3 +99,9 @@ select min(salary) from employee_payroll;
 select gender,count(gender) from employee_payroll
 group by gender;
 ```
+### Store employee phone, address, department
+#### Add new columns to the employee_payroll table
+```
+alter table employee_payroll
+add (phone bigint(10) not null, address varchar(30) default 'main-road', department varchar(20) not null);
+```
