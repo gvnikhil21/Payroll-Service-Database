@@ -123,7 +123,7 @@ insert into employee_payroll values
 ```
 drop table employee_payroll;
 ```
-###create ER-Model and convert to relational model by workbench
+### Create ER-Model and convert to relational model by workbench
 ```
 use of forward engineer option in workbench to create tables as per ER-Diagram
 ```
