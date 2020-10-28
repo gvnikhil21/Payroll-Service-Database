@@ -127,3 +127,39 @@ drop table employee_payroll;
 ```
 use of forward engineer option in workbench to create tables as per ER-Diagram
 ```
+### Ensuring retrieval queries for new table structure
+#### Retrieve all values from employee table and payroll table
+```
+select employee.*,basic_pay,deductions,taxable_pay,tax,net_pay from employee join payroll
+on employee.employee_id=payroll.employee_id;
+```
+#### Retrieve basic_pay (salary) for particular employee
+```
+select employee.employee_id, employee.name, payroll.basic_pay from
+employee join payroll
+on employee.employee_id=payroll.employee_id
+where employee.name='Gates';
+```
+### Perform operations with multirow/group functions
+```
+select sum(basic_pay) from payroll;
+
+select employee.gender, sum(basic_pay) from 
+employee join payroll
+on employee.employee_id=payroll.employee_id
+group by employee.gender;
+
+select avg(salary) from payroll;
+
+select employee.gender, avg(basic_pay) from 
+employee join payroll
+on employee.employee_id=payroll.employee_id
+group by gender;
+
+select max(basic_pay) from payroll;
+
+select min(basic_pay) from payroll;
+
+select gender, count(gender) from employee
+group by gender;
+```
