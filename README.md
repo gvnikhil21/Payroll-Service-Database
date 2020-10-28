@@ -105,3 +105,8 @@ group by gender;
 alter table employee_payroll
 add (phone bigint(10) not null, address varchar(30) default 'main-road', department varchar(20) not null);
 ```
+### Extend employee_payroll table to have basic_pay, deductions, taxable_pay, income_tax, net_pay
+```
+alter table employee_payroll
+add(basic_pay bigint(15) not null, deductions bigint(15) not null, taxable_pay bigint(15) not null, income_tax bigint(15) not null, net_pay bigint(15) not null);
+```
