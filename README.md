@@ -118,3 +118,9 @@ insert into employee_payroll values
 (4,'Terissa','F','2020-05-22', 0,'abc', 'Sales', 4000000,0,0,0,0),
 (5,'Terissa','F','2020-05-22', 0,'abc', 'Marketing', 4000000,2000000,2000000,500000,1500000);
 ```
+### Create new schema following normalization concept
+#### Drop employee_payroll table
+```
+drop table employee_payroll;
+```
+######create ER-Model and convert to relational model by workbench
