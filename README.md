@@ -110,3 +110,11 @@ add (phone bigint(10) not null, address varchar(30) default 'main-road', departm
 alter table employee_payroll
 add(basic_pay bigint(15) not null, deductions bigint(15) not null, taxable_pay bigint(15) not null, income_tax bigint(15) not null, net_pay bigint(15) not null);
 ```
+### Add Terissa to sales and marketing department of employee_payroll table
+```
+alter table employee_payroll drop salary;
+
+insert into employee_payroll values
+(4,'Terissa','F','2020-05-22', 0,'abc', 'Sales', 4000000,0,0,0,0),
+(5,'Terissa','F','2020-05-22', 0,'abc', 'Marketing', 4000000,2000000,2000000,500000,1500000);
+```
